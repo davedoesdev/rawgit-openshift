@@ -7,6 +7,7 @@
     "express-handlebars": "3.0.0",
     "mime-db": "1.23.0",
     "newrelic": "1.28.3",
+    "nodemon": "^1.9.1",
     "on-finished": "2.3.0"
   },
   "devDependencies": {
@@ -15,7 +16,6 @@
     "mocha": "^2.2.5",
     "morgan": "^1.7.0",
     "nock": "^2.7.0",
-    "nodemon": "^1.9.1",
     "supertest": "0.15.0"
   },
   "scripts": {
