@@ -1,3 +1,3 @@
 #!/bin/bash
 export NODE_ENV=development
-exec nodemon
+exec ./node_modules/.bin/nodemon
