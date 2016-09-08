@@ -9,6 +9,9 @@ module.exports = {
   // Base URL to use when requesting repo files.
   baseRepoUrl: 'https://raw.githubusercontent.com',
 
+  // Base URL to use when requesting release files.
+  baseReleaseUrl: 'https://github.com',
+
   // Domain to use for CDN requests to RawGit.
   cdnDomain: 'cdn.rawgit.com',
 

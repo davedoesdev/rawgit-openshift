@@ -9,7 +9,8 @@
     "newrelic": "1.28.3",
     "nodemon": "^1.9.1",
     "morgan": "^1.7.0",
-    "on-finished": "2.3.0"
+    "on-finished": "2.3.0",
+    "follow-redirects": "0.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

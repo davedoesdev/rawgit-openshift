@@ -69,6 +69,19 @@ app.route(/^\/[0-9A-Za-z-]{1,100}\/[0-9a-f]{1,100}\/raw\/?/)
     middleware.proxyPath(config.baseGistUrl)
   );
 
+// Releases file.
+app.route('/:user/:repo/releases/*')
+  .all(
+    middleware.cdn,
+    middleware.security,
+    middleware.noRobots,
+    middleware.accessControl
+  )
+  .get(
+    middleware.fileRedirect(config.baseReleaseUrl),
+    middleware.proxyRelease(config.baseReleaseUrl)
+  );
+
 // Repo file.
 app.route('/:user/:repo/:branch/*')
   .all(
