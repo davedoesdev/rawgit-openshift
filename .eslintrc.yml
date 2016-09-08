@@ -1,0 +1,175 @@
+env:
+  es6: true
+  node: true
+
+parserOptions:
+  ecmaVersion: 6
+  sourceType: module
+
+rules:
+  accessor-pairs: warn
+  arrow-spacing:
+    - warn
+    - after: true
+      before: true
+  block-scoped-var: error
+  brace-style:
+    - warn
+    - 1tbs
+    - allowSingleLine: true
+  callback-return:
+    - warn
+    - [callback, cb, next]
+  constructor-super: error
+  curly:
+    - error
+    - all
+  dot-location:
+    - warn
+    - property
+  dot-notation: warn
+  eol-last: warn
+  eqeqeq:
+    - warn
+    - allow-null
+  handle-callback-err:
+    - warn
+    - "^(err|error)$"
+  keyword-spacing: warn
+  linebreak-style:
+    - error
+    - unix
+  indent:
+    - warn
+    - 2
+    - SwitchCase: 1
+  max-lines:
+    - warn
+    - max: 2000
+      skipBlankLines: true
+      skipComments: true
+  max-statements-per-line:
+    - warn
+    - max: 2
+  new-parens: warn
+  no-alert: warn
+  no-caller: error
+  no-case-declarations: warn
+  no-class-assign: warn
+  no-cond-assign:
+    - warn
+    - except-parens
+  no-confusing-arrow:
+    - warn
+    - allowParens: true
+  no-const-assign: error
+  no-constant-condition: warn
+  no-debugger: error
+  no-delete-var: warn
+  no-dupe-args: error
+  no-dupe-class-members: error
+  no-dupe-keys: error
+  no-duplicate-imports: warn
+  no-empty: warn
+  no-empty-character-class: warn
+  no-empty-function:
+    - warn
+    - allow:
+      - arrowFunctions
+  no-empty-pattern: warn
+  no-eval: error
+  no-ex-assign: warn
+  no-extend-native: error
+  no-extra-bind: warn
+  no-extra-boolean-cast: warn
+  no-extra-label: warn
+  no-extra-semi: warn
+  no-fallthrough: warn
+  no-floating-decimal: warn
+  no-func-assign: warn
+  no-implicit-globals: warn
+  no-implied-eval: error
+  no-inner-declarations: warn
+  no-invalid-regexp: error
+  no-irregular-whitespace: error
+  no-label-var: warn
+  no-labels: warn
+  no-mixed-operators: warn
+  no-mixed-spaces-and-tabs: error
+  no-native-reassign: error
+  no-negated-condition: warn
+  no-negated-in-lhs: error
+  no-nested-ternary: warn
+  no-new-func: error
+  no-new-object: warn
+  no-new-require: warn
+  no-new-symbol: error
+  no-new-wrappers: warn
+  no-obj-calls: error
+  no-octal: error
+  no-octal-escape: warn
+  no-path-concat: warn
+  no-process-exit: warn
+  no-proto: error
+  no-prototype-builtins: warn
+  no-redeclare: warn
+  no-regex-spaces: warn
+  no-script-url: error
+  no-self-assign: warn
+  no-self-compare: warn
+  no-sequences: warn
+  no-shadow-restricted-names: error
+  no-spaced-func: warn
+  no-sparse-arrays: warn
+  no-this-before-super: error
+  no-throw-literal: error
+  no-undef: error
+  no-undef-init: warn
+  no-unexpected-multiline: error
+  no-unmodified-loop-condition: warn
+  no-unneeded-ternary: warn
+  no-unreachable: warn
+  no-unsafe-finally: warn
+  no-unused-labels: warn
+  no-unused-vars: warn
+  no-use-before-define:
+    - error
+    - nofunc
+  no-useless-call: warn
+  no-useless-computed-key: warn
+  no-useless-constructor: warn
+  no-useless-escape: warn
+  no-useless-rename: warn
+  no-var: warn
+  no-warning-comments:
+    - warn
+    - location: start
+      terms:
+        - fixme
+        - xxx
+  no-whitespace-before-property: warn
+  no-with: error
+  one-var:
+    - warn
+    - never
+  prefer-rest-params: warn
+  prefer-spread: warn
+  quotes: off
+  radix: error
+  rest-spread-spacing:
+    - warn
+    - never
+  semi: warn
+  space-infix-ops: warn
+  space-unary-ops:
+    - warn
+    - words: true
+      nonwords: false
+  unicode-bom:
+    - error
+    - never
+  use-isnan: warn
+  valid-typeof: warn
+  wrap-iife:
+    - warn
+    - any
