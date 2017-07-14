@@ -23,16 +23,38 @@ module.exports = {
   // Git tag that points to the GitHub commit from which RawGit's own static
   // assets should be loaded via the CDN. Set this to a falsy value to disable
   // loading static assets from the CDN.
-  cdnTag: 'cdn-20160615-01',
+  cdnTag: 'cdn-20170108',
 
   // Domain to use for dev requests to RawGit.
   devDomain: 'rawgit.com',
 
-  // Whitelist of file extensions that will be proxied through RawGit. All
-  // others will be redirected to raw.githubusercontent.com.
+  // Blacklist of file extensions that will always be redirected to GitHub, even
+  // when requested via the CDN. Typically extensions are on this list because
+  // GitHub serves them with the proper Content-Type and there's no reason to
+  // proxy them.
+  extensionBlacklist: new Set([
+    '',
+    '.bz2',
+    '.dcm',
+    '.exe',
+    '.gif',
+    '.gz',
+    '.ico',
+    '.jpg',
+    '.jpeg',
+    '.md5',
+    '.png',
+    '.traineddata',
+    '.wav',
+    '.wordlist',
+    '.zip'
+  ]),
+
+  // Whitelist of file extensions that will be proxied through RawGit for
+  // development requests. All others will be redirected to
+  // raw.githubusercontent.com.
   //
-  // Requests to the cdnDomain will bypass this whitelist and proxy all file
-  // types. Please keep this list alphabetized.
+  // CDN requests use `extensionBlacklist` instead of this whitelist.
   extensionWhitelist: new Set([
     '.appcache',
     '.coffee',

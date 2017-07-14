@@ -46,11 +46,16 @@ app.use(express.static(config.publicDir));
 
 // -- Routes -------------------------------------------------------------------
 app.get('/', (req, res) => {
-  res.render('index', {includeMetaDescription: true});
+  res.set('Cache-Control', 'max-age=60');
+
+  res.render('index', {
+    includeMetaDescription: true,
+    url: req.query.url
+  });
 });
 
 app.get('/faq', (req, res) => {
-  res.redirect('https://github.com/rgrove/rawgit/wiki/Frequently-Asked-Questions');
+  res.redirect('https://github.com/rgrove/rawgit/blob/master/FAQ.md');
 });
 
 // Don't allow requests for Google Webmaster Central verification files.

@@ -6,7 +6,8 @@
   <div class="url-paste">
     <p id="url-form">
       <label for="url" class="offscreen">GitHub URL:</label>
-      <input id="url" class="url" type="url" placeholder="Paste a GitHub file or gist URL here." autofocus>
+      <input id="url" class="url" type="url" value="{{url}}"
+             placeholder="Paste a GitHub file or gist URL here." autofocus tabindex="1">
     </p>
   </div>
 
@@ -14,16 +15,16 @@
     <h2>Use this URL in <strong>production</strong></h2>
 
     <p class="url-container">
-      <input id="url-prod" class="url" placeholder="https://{{config.cdnDomain}}/user/repo/tag/file" readonly>
+      <input id="url-prod" class="url" placeholder="https://{{config.cdnDomain}}/user/repo/tag/file" readonly tabindex="2">
       <button id="url-prod-copy" class="url-copy-button" data-clipboard-target="#url-prod" title="Copy URL" disabled>
-        <img src="img/clippy.svg" alt="">
+        <img src="{{{assetUrl "/img/clippy.svg"}}}" alt="">
       </button>
     </p>
 
     <ul>
-      <li><p>No traffic limits or throttling. Files are served via <a href="http://www.maxcdn.com/">MaxCDN</a>'s super fast global CDN.
+      <li><p>No traffic limits or throttling. Files are served via <a href="https://stackpath.com/">StackPath</a>'s super fast global CDN.
       <li><p>Use a specific tag or commit hash in the URL (not a branch). Files are cached permanently based on the URL. Query strings are ignored.
-      <li><p>The catch: this is a free service, so there are <a href="https://github.com/rgrove/rawgit/wiki/Frequently-Asked-Questions#i-need-guaranteed-100-uptime-should-i-use-cdnrawgitcom">no uptime or support guarantees</a>.
+      <li><p>The catch: this is a free service, so there are <a href="https://github.com/rgrove/rawgit/blob/master/FAQ.md#i-need-guaranteed-100-uptime-should-i-use-cdnrawgitcom">no uptime or support guarantees</a>.
     </ul>
   </div>
 
@@ -31,9 +32,9 @@
     <h2>Use this URL for <strong>development</strong></h2>
 
     <p class="url-container">
-      <input id="url-dev" class="url" placeholder="https://{{config.devDomain}}/user/repo/branch/file" readonly>
+      <input id="url-dev" class="url" placeholder="https://{{config.devDomain}}/user/repo/branch/file" readonly tabindex="3">
       <button id="url-dev-copy" class="url-copy-button" data-clipboard-target="#url-dev" title="Copy URL" disabled>
-        <img src="img/clippy.svg" alt="">
+        <img src="{{{assetUrl "/img/clippy.svg"}}}" alt="">
       </button>
     </p>
 
@@ -50,6 +51,7 @@ var cdnDomain = '{{config.cdnDomain}}';
 var devDomain = '{{config.devDomain}}';
 </script>
 
-<script src="//cdn.rawgit.com/zenorocha/document.queryCommandSupported/v1.0.0/dist/queryCommandSupported.min.js"></script>
-<script src="//cdn.rawgit.com/zenorocha/clipboard.js/v1.5.10/dist/clipboard.min.js"></script>
+<script src="https://cdn.rawgit.com/cdnjs/cdnjs/0971b44/ajax/libs/fetch/2.0.1/fetch.min.js"></script>
+<script src="https://cdn.rawgit.com/zenorocha/document.queryCommandSupported/v1.0.0/dist/queryCommandSupported.min.js"></script>
+<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.10/dist/clipboard.min.js"></script>
 <script src="{{{assetUrl "/js/url-formatter.js"}}}"></script>
