@@ -115,7 +115,7 @@ app.use((err, req, res, next) => {
 
 // -- Server -------------------------------------------------------------------
 if (app.get('env') !== 'test') {
-  const ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+  const ip = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
   const port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
   app.listen(port, ip, () => {
