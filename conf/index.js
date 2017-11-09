@@ -72,6 +72,7 @@ module.exports = {
     '.jsonld',
     '.kml',
     '.md',
+    '.mjs',
     '.n3',
     '.nt',
     '.otf',
