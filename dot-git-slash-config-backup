@@ -3,15 +3,12 @@
 	filemode = true
 	bare = false
 	logallrefupdates = true
-[remote "origin"]
-	url = ssh://57d1034d0c1e66a0ce0000bc@rawgit-davedoesdev.rhcloud.com/~/git/rawgit.git/
-	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
 	remote = origin
 	merge = refs/heads/master
 [remote "upstream"]
 	url = https://github.com/rgrove/rawgit.git
 	fetch = +refs/heads/*:refs/remotes/upstream/*
-[remote "github"]
-	url = git@github.com:davedoesdev/rawgit-openshift.git
+[remote "origin"]
+	url = git@github.com:davedoesdev/rawgit-now.git
 	fetch = +refs/heads/*:refs/remotes/github/*
