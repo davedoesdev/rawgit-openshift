@@ -35,6 +35,12 @@ db['application/x-bat'] = {
   extensions  : ['bat']
 };
 
+db['text/shex'] = {
+  charset     : 'utf-8',
+  compressible: true,
+  extensions  : ['shex', 'shexc']
+};
+
 db['text/x-handlebars-template'] = {
   charset     : 'utf-8',
   compressible: true,

@@ -23,7 +23,7 @@ module.exports = {
   // Git tag that points to the GitHub commit from which RawGit's own static
   // assets should be loaded via the CDN. Set this to a falsy value to disable
   // loading static assets from the CDN.
-  cdnTag: 'cdn-20170108',
+  cdnTag: 'cdn-20180423',
 
   // Domain to use for dev requests to RawGit.
   devDomain: 'rawgit.com',
@@ -80,12 +80,14 @@ module.exports = {
     '.pdf',
     '.rdf',
     '.rss',
+    '.shex',
     '.svg',
     '.swf',
     '.ttc',
     '.ttf',
     '.ttl',
     '.vtt',
+    '.wasm',
     '.woff',
     '.woff2',
     '.xht',
