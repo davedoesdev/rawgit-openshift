@@ -1,5 +1,6 @@
 "use strict";
 
+const { BloomFilter } = require('bloom-filters');
 const path = require('path');
 
 module.exports = {
@@ -12,18 +13,24 @@ module.exports = {
   // Base URL to use when requesting release files.
   baseReleaseUrl: 'https://github.com',
 
+  // Bloom filter of grandfathered repos that may continue to use CDN URLs.
+  cdnBloomFilter: BloomFilter.fromJSON(require('./bloom-filter-cdn.json')),
+
   // Domain to use for CDN requests to RawGit.
   cdnDomain: 'cdn.rawgit.com',
 
   // GitHub "username/repo" from which RawGit's own static assets should be
   // loaded via the CDN. Set this to a falsy value to disable loading static
   // assets from the CDN.
-  cdnRepo: 'rgrove/rawgit',
+  // cdnRepo: 'rgrove/rawgit',
 
   // Git tag that points to the GitHub commit from which RawGit's own static
   // assets should be loaded via the CDN. Set this to a falsy value to disable
   // loading static assets from the CDN.
-  cdnTag: 'cdn-20180423',
+  // cdnTag: 'cdn-20180423',
+
+  // Bloom filter of grandfathered repos that may continue to use dev URLs.
+  devBloomFilter: BloomFilter.fromJSON(require('./bloom-filter-dev.json')),
 
   // Domain to use for dev requests to RawGit.
   devDomain: 'rawgit.com',
