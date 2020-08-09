@@ -12,7 +12,8 @@
     "morgan": "1.10.0",
     "newrelic": "6.11.0",
     "nodemon": "2.0.4",
-    "on-finished": "2.3.0"
+    "on-finished": "2.3.0",
+    "serverless-http": "2.5.0"
   },
   "devDependencies": {
     "chai": "4.2.0",
