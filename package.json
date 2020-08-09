@@ -6,12 +6,13 @@
     "bloom-filters": "1.3.1",
     "express": "4.17.1",
     "express-handlebars": "5.1.0",
+    "follow-redirects": "1.12.1",
+    "google-auth-library": "6.0.6",
     "mime-db": "1.44.0",
-    "newrelic": "6.11.0",
-    "on-finished": "2.3.0",
     "morgan": "1.10.0",
+    "newrelic": "6.11.0",
     "nodemon": "2.0.4",
-    "follow-redirects": "1.12.1"
+    "on-finished": "2.3.0"
   },
   "devDependencies": {
     "chai": "4.2.0",
