@@ -14,7 +14,7 @@ module.exports = {
   baseReleaseUrl: 'https://github.com',
 
   // Bloom filter of grandfathered repos that may continue to use CDN URLs.
-  cdnBloomFilter: BloomFilter.fromJSON(require('./bloom-filter-cdn.json')),
+  //cdnBloomFilter: BloomFilter.fromJSON(require('./bloom-filter-cdn.json')),
 
   // Domain to use for CDN requests to RawGit.
   cdnDomain: 'cdn.rawgit.com',
@@ -30,7 +30,7 @@ module.exports = {
   // cdnTag: 'cdn-20180423',
 
   // Bloom filter of grandfathered repos that may continue to use dev URLs.
-  devBloomFilter: BloomFilter.fromJSON(require('./bloom-filter-dev.json')),
+  //devBloomFilter: BloomFilter.fromJSON(require('./bloom-filter-dev.json')),
 
   // Domain to use for dev requests to RawGit.
   devDomain: 'rawgit.com',
