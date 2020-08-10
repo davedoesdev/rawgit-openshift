@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 "use strict";
 
+try { require('./views/news/sunset.handlebars') } catch {}
+
 // For details on how to set up New Relic reporting, see
 // https://docs.newrelic.com/docs/nodejs/configuring-nodejs-with-environment-variables
 if (process.env.RAWGIT_ENABLE_NEW_RELIC) {
