@@ -140,14 +140,5 @@ app.use((err, req, res, next) => {
 });
 
 // -- Server -------------------------------------------------------------------
-if (app.get('env') !== 'test') {
-  const ip = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
-  const port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-
-  app.listen(port, ip, () => {
-    console.log('Listening on port ' + port);
-  });
-}
-
 const serverless = require('serverless-http');
 module.exports.handler = serverless(app);
