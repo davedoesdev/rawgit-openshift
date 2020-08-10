@@ -1,7 +1,24 @@
 #!/usr/bin/env node
 "use strict";
 
-try { require('./views/news/sunset.handlebars') } catch {}
+try { require('./views/index.handlebars'); } catch {}
+try { require('./views/errors/blacklisted.handlebars'); } catch {}
+try { require('./views/layouts/main.handlebars'); } catch {}
+try { require('./views/news/https-only.handlebars'); } catch {}
+try { require('./views/news/sunset.handlebars'); } catch {}
+try { require('./public/css/defend.css'); } catch {}
+try { require('./public/css/rawgit.css'); } catch {}
+try { require('./public/errors/403.html'); } catch {}
+try { require('./public/errors/403-shutdown.html'); } catch {}
+try { require('./public/errors/404.html'); } catch {}
+try { require('./public/errors/500.html'); } catch {}
+try { require('./public/errors/502.html'); } catch {}
+try { require('./public/img/clippy.svg'); } catch {}
+try { require('./public/img/sushi-icon.png'); } catch {}
+try { require('./public/img/sushi-large.png'); } catch {}
+try { require('./public/img/sushi.png'); } catch {}
+try { require('./public/js/defend.js'); } catch {}
+try { require('./public/js/url-formatter.js'); } catch {}
 
 // For details on how to set up New Relic reporting, see
 // https://docs.newrelic.com/docs/nodejs/configuring-nodejs-with-environment-variables
