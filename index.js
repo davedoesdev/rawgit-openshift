@@ -17,7 +17,7 @@ try { require('./public/img/clippy.svg'); } catch {}
 try { require('./public/img/sushi-icon.png'); } catch {}
 try { require('./public/img/sushi-large.png'); } catch {}
 try { require('./public/img/sushi.png'); } catch {}
-try { require('./public/js/defend.js'); } catch {}
+//try { require('./public/js/defend.js'); } catch {}
 try { require('./public/js/url-formatter.js'); } catch {}
 
 // For details on how to set up New Relic reporting, see
@@ -141,4 +141,6 @@ app.use((err, req, res, next) => {
 
 // -- Server -------------------------------------------------------------------
 const serverless = require('serverless-http');
-module.exports.handler = serverless(app);
+module.exports.handler = serverless(app, {
+    binary: ['application/wasm', 'application/octet-stream']
+});
